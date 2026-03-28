@@ -50,12 +50,18 @@
     },
     "mac": {
       "category": "public.app-category.productivity",
-      "artifactName": "wenben-mac-portable-${version}-universal.${ext}",
+      "artifactName": "wenben-mac-portable-${version}-${arch}.${ext}",
       "target": [
         {
           "target": "zip",
           "arch": [
-            "universal"
+            "arm64"
+          ]
+        },
+        {
+          "target": "zip",
+          "arch": [
+            "x64"
           ]
         }
       ],

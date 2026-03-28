@@ -30,9 +30,16 @@ jobs:
           ELECTRON_BUILDER_PUBLISH: never
         run: npm run build:mac
 
-      - name: 上传便携版 zip（Artifacts）
+      - name: 上传 Apple Silicon（arm64）zip
         uses: actions/upload-artifact@v4
         with:
-          name: wenben-mac-portable
-          path: dist_102_v2/*.zip
+          name: wenben-mac-arm64
+          path: dist_102_v2/wenben-mac-portable-*-arm64.zip
+          if-no-files-found: error
+
+      - name: 上传 Intel（x64）zip
+        uses: actions/upload-artifact@v4
+        with:
+          name: wenben-mac-x64
+          path: dist_102_v2/wenben-mac-portable-*-x64.zip
           if-no-files-found: error
