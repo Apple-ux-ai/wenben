@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+  background-color: #f5f7fa;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  height: 100vh;
+}
+
+html,
+body,
+#root {
+  min-width: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.i18n-wrap,
+.i18n-wrap .ant-typography,
+.i18n-wrap .ant-btn,
+.i18n-wrap .ant-tag,
+.i18n-wrap .ant-badge,
+.i18n-wrap .ant-breadcrumb,
+.i18n-wrap .ant-steps-item-title,
+.i18n-wrap .ant-steps-item-description,
+.i18n-wrap .ant-empty-description,
+.i18n-wrap .ant-select-selection-item,
+.i18n-wrap .ant-select-item-option-content,
+.i18n-wrap .ant-form-item-label > label,
+.i18n-wrap .ant-radio-wrapper,
+.i18n-wrap .ant-checkbox-wrapper {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.app-sidebar-menu .ant-menu-item,
+.app-sidebar-menu .ant-menu-item-group-title {
+  white-space: normal;
+  height: auto;
+  line-height: 1.4;
+}
+
+.app-sidebar-menu .ant-menu-item {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.app-sidebar-menu .ant-menu-title-content {
+  white-space: normal;
+  line-height: 1.35;
+}
+
+.app-flex-wrap {
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.app-min-width-0 {
+  min-width: 0;
+}
+
+.app-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.app-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 1280px) {
+  .app-hide-on-tight {
+    display: none !important;
+  }
+}
+
+/* 自定义滚动条样式 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d9d9d9;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bfbfbf;
+}

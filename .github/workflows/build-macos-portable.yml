@@ -1,0 +1,36 @@
+name: macOS 便携版 zip
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  mac-portable:
+    runs-on: macos-latest
+    timeout-minutes: 45
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 使用 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: 安装依赖
+        run: npm ci
+
+      - name: 构建应用与 macOS zip
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: "false"
+        run: npm run build:mac
+
+      - name: 上传便携版 zip（Artifacts）
+        uses: actions/upload-artifact@v4
+        with:
+          name: wenben-mac-portable
+          path: dist_102_v2/*.zip
+          if-no-files-found: error
