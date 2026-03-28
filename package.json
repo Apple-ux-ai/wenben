@@ -18,6 +18,7 @@
     "directories": {
       "output": "dist_102_v2"
     },
+    "publish": null,
     "files": [
       "out/**/*"
     ],

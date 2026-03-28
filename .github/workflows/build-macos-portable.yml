@@ -26,6 +26,8 @@ jobs:
       - name: 构建应用与 macOS zip
         env:
           CSC_IDENTITY_AUTO_DISCOVERY: "false"
+          # 禁止 electron-builder 在 CI 内向 GitHub Release 发布（仅需 Actions Artifact）
+          ELECTRON_BUILDER_PUBLISH: never
         run: npm run build:mac
 
       - name: 上传便携版 zip（Artifacts）
